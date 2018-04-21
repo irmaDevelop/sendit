@@ -36,8 +36,8 @@ def main():
 
   # Datos 
   try:
-   gmail_user = "tunafemeninaunt@gmail.com" #str(input("Cuenta de Usuario:")).lower().strip()
-   gmail_pwd = "T.2017TRUJILLO" #getpass.getpass("Contrasenia:").strip()
+   gmail_user = str(input("Cuenta de Usuario:")).lower().strip() # aqui va el correo entre comillas
+   gmail_pwd = getpass.getpass("Contrasenia:").strip() #aqui va la contraseña
    smtpserver.login(gmail_user, gmail_pwd)
   except smtplib.SMTPException:
    print ("")
@@ -51,7 +51,7 @@ def main():
   print (getpass.getpass("Presione ENTER para continuar..."))
   sys.exit(1)
 
- sub = "TFUNT - Convocatoria Abril 2017"#str(input("Asunto:")).strip()
+ sub = str(input("Asunto:")).strip() #aqui va el asunto de correo
  clavesmidic = estructura.keys()
 
  for estudiante in clavesmidic:
